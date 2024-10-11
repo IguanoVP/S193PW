@@ -1,6 +1,6 @@
 @extends('layouts.plantilla')
 
-@section('titulo','componentes Blade')
+@section('titulo','Componentes Blade')
 
 @section('contenido')
 
@@ -12,4 +12,11 @@ Soy el contenido del primero
 Otro Gaaaato!!!!
 </x-Card>
 
+
+<div class="container mt-4">
+
+<x-Alert tipo="danger"> rojo </x-Alert>
+<x-Alert tipo="warning"> amarillo </x-Alert>
+
+</div>
 @endsection

@@ -1,6 +1,8 @@
 @extends('layouts.Plantilla')
 
-@section('titulo','contenido')
+@section('titulo','Registro Clientes')
+
+@section('contenido')
 
 {{-- inicia Tarjeta con formulario --}}
     <div class="container mt-5 col-md-6">
