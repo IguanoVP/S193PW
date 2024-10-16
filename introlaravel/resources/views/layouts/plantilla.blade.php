@@ -19,7 +19,7 @@
                 <ul class="navbar-nav">
 
                 <li class="nav-item">
-                    <a href="/form" class="nav-link" aria-current="page" >Registro Clientes</a>
+                    <a href="/form" class="nav-link {{request()->routeIs('rutaform')?'text-warning':'' }}" aria-current="page" href="{{route('rutaform')}}" >Registro Clientes</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" >Consulta Clientes</a>

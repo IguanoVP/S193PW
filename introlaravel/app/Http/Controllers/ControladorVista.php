@@ -21,5 +21,14 @@ class ControladorVista extends Controller
 {
     return view('clientes');
 }
+public function procesarCliente(Request $peticion)
+{
+    //return 'Si llego la info del cliente :(';
+
+    //return $peticion->all();
+    //return $peticion->path();
+   //return $peticion->url();
+   return $peticion->ip();
+}
 
 }
