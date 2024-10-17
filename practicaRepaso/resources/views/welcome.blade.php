@@ -37,7 +37,7 @@
         <h3>122044076</h3>
         <h3>S193</h3>
 
-        <button type="button" class="btn btn-dark">Dark</button>
+        <button type="button" class="btn btn-dark" onclick="window.location.href='{{ route('rutaVistaRepaso1') }}'">Repaso 1</button>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
