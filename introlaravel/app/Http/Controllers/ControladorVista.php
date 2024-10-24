@@ -23,21 +23,13 @@ class ControladorVista extends Controller
     }
     public function procesarCliente(Request $peticion)
     {
-        // respuestas de redireccion 
+        $validacion = $peticion->validate([
+            'txtnombre'=> 'required |min:4 | max:20',
+            'txtapellido'=> 'required',
+            'txtcorreo'=> 'required',
+            'txttelefono'=> 'required |numeric'
+        ]);
 
-        //redireccion usando la ruta
-        //return redirect('/');
-
-        //redireccion usando el nombre de la ruta
-        //return redirect()->route('rutaclientes');
-
-        //redireccion al origen de la peticion 
-        //return back();
-
-
-        //redireccion con variable
-        //$id= [['usuario'=>1],['usuario'=>2]];
-        //return view('formulario',compact('id'));
 
         //redireccion con un mensaje  flash en session
         $usuario= $peticion->input('txtnombre');
