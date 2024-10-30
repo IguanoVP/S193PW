@@ -24,7 +24,7 @@
                 <ul class="navbar-nav">
 
                 <li class="nav-item">
-                    <a href="/form" class="nav-link" aria-current="page" >Registro Clientes</a>
+                    <a href="/form" class="nav-link" aria-current="page" >{{__('Registro Clientes')}}</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" >Consulta Clientes</a>
