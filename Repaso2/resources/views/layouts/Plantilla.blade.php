@@ -13,9 +13,9 @@
         <div class="container-fluid">
            
             <div class="collapse navbar-collapse" id="navbarNav">
-                    <a class="navbar-brand" href="/">Inicio
+                    <a class="navbar-brand" href="/">{{__('Inicio')}}
                         <div class="navbar-nav">
-                        <a href="{{ route('rutaRegistro') }}" class="nav-link {{ request()->routeIs('rutaRegistro') ? 'text-dark' : '' }}">Registro Libro</a>
+                        <a href="{{ route('rutaRegistro') }}" class="nav-link {{ request()->routeIs('rutaRegistro') ? 'text-dark' : '' }}">{{__('Registro Libro')}}</a>
             </div>
         </div>
     </nav>
@@ -23,8 +23,8 @@
     @yield('contenido')
 
         <footer>
-        @yield('footer')<h3>Contacto</h3>
-        <p>Teléfono: 4423514456</p>
+        @yield('footer')<h3>{{__('Contacto')}}</h3>
+        <p>{{__('Teléfono')}}: 4423514456</p>
         <p>Email: 122044076@upq.edu.mx</p>
         </footer>
 </body>

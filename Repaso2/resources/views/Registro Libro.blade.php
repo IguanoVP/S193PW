@@ -13,7 +13,7 @@
     <script>
         Swal.fire({
   title: "Increible men!",
-  text: "Gud job",
+  text: "Gud yob",
   icon: "XD"
 });
     </script>
@@ -21,7 +21,7 @@
 
     <div class="card front monospace">
         <div class="card-header fs-5 text-center text-primary">
-            Registro Libros
+            {{__('Registro Libros')}}
         </div>
 
         <div class="card-body text-justify">
@@ -34,32 +34,32 @@
                         <small class="text-danger fst-italic">{{ $errors->first('txtisbn') }}</small>
                     </div>
                     <div class="mb-3">
-                        <label for="titulo" class="form-label"> Titulo: </label>
+                        <label for="titulo" class="form-label"> {{__('Titulo')}}: </label>
                             <input type="text" class="form-control" name="txttitulo" value="{{old('txttitulo')}}">
                             <small class="text-danger fst-italic">{{ $errors->first('txttitulo') }}</small>
                         </div>
                         <div class="mb-3">
-                            <label for="Autor" class="form-label"> Autor: </label>
+                            <label for="Autor" class="form-label"> {{__('Autor')}}: </label>
                                 <input type="text" class="form-control" name="txtAutor" value="{{old('txtAutor')}}">
                                 <small class="text-danger fst-italic">{{ $errors->first('txtAutor') }}</small>
                             </div>
                             <div class="mb-3">
-                                <label for="Paginas" class="form-label"> Paginas: </label>
+                                <label for="Paginas" class="form-label"> {{__('Paginas')}}: </label>
                                     <input type="text" class="form-control" name="txtPaginas" value="{{old('txtPaginas')}}">
                                     <small class="text-danger fst-italic">{{ $errors->first('txtPaginas') }}</small>
                                 </div>
                                 <div class="mb-3">
-                                    <label for="Anio" class="form-label"> Anio: </label>
+                                    <label for="Anio" class="form-label"> {{__('Anio')}}: </label>
                                         <input type="text" class="form-control" name="txtAnio" value="{{old('txtAnio')}}">
                                         <small class="text-danger fst-italic">{{ $errors->first('txtAnio') }}</small>
                                     </div>
                                     <div class="mb-3">
-                                        <label for="Editorial" class="form-label"> Editorial: </label>
+                                        <label for="Editorial" class="form-label"> {{__('Editorial')}}: </label>
                                             <input type="text" class="form-control" name="txtEditorial" value="{{old('txtEditorial')}}">
                                             <small class="text-danger fst-italic">{{ $errors->first('txtEditorial') }}</small>
                                         </div>
                                         <div class="mb-3">
-                                            <label for="EmailEditorial" class="form-label"> Email de Editorial: </label>
+                                            <label for="EmailEditorial" class="form-label"> {{__('Email de Editorial')}}: </label>
                                                 <input type="text" class="form-control" name="txtEmailEditorial" value="{{old('txtEmailEditorial')}}">
                                                 <small class="text-danger fst-italic">{{ $errors->first('txtEmailEditorial') }}</small>
                                             </div>
