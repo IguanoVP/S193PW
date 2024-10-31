@@ -6,6 +6,19 @@
 
 @section('footer')
 
+    @if (@session('chido'))
+    <x-Alert tipo="danger">{{ session('chido')}}</x-Alert>   
+    @endif
+    @session ('chido')
+    <script>
+        Swal.fire({
+  title: "Increible men!",
+  text: "Gud job",
+  icon: "XD"
+});
+    </script>
+    @endsession
+
     <div class="card front monospace">
         <div class="card-header fs-5 text-center text-primary">
             Registro Libros
@@ -14,6 +27,7 @@
         <div class="card-body text-justify">
 
             <form action='/registrarLibro' method="POST">
+                @csrf
                 <div class="mb-3">
                     <label for="isbn" class="form-label"> ISBN: </label>
                         <input type="number" class="form-control" name="txtisbn" value="{{old('txtisbn')}}">
