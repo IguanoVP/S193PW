@@ -18,7 +18,7 @@ class ControladorLibro extends Controller
     public function procesarLibro(validadorLibro $peticionV)
     {
         $Libro= $peticionV->input('txttitulo');
-        session()->flash('chido','todo correcto: Libro '.$Libro.' guardado');
+        session()->flash('chido','Libro '.$Libro.' guardado');
         return to_route('rutaRegistro');
     }
 }

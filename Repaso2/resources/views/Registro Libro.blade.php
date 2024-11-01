@@ -12,9 +12,9 @@
     @session ('chido')
     <script>
         Swal.fire({
-  title: "Increible men!",
-  text: "Gud yob",
-  icon: "XD"
+  title: "Todo correcto",
+  text:  '{{$value}}',
+  icon: "success"
 });
     </script>
     @endsession
@@ -67,7 +67,7 @@
     </div>
     </div>
     <div class="d-grid gap-2 mt-2 mb-1">
-        <button type="submit" class="btn btn-secondary btn-sm">Guardar Libro</button>
+        <button type="submit" class="btn btn-secondary btn-sm">{{__('Guardar Libro')}}</button>
     </div>
 </form>
 
