@@ -1,10 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\controladorPrenda;
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('/Regis',[controladorPrenda::class,'welcome']) ->name('rutawelcome');
-route::post('/registrar',[ControladorLibro::class,'procesarPrenda']) ->name('RutaEnvioPre');
+route::get('/',[controladorPrenda::class,'Registro']) ->name('rutaRegistro');
+route::post('/registroPrenda',[controladorPrenda::class,'procesarPrenda']) ->name('rutaEnvioRe');
