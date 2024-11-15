@@ -21,10 +21,10 @@
                 <ul class="navbar-nav">
 
                 <li class="nav-item">
-                    <a href="/form" class="nav-link {{request()->routeIs('rutaform')?'text-warning':'' }}" aria-current="page" href="{{route('rutaform')}}" >Registro Clientes</a>
+                    <a href="/form" class="nav-link {{request()->routeIs('rutaForm')?'text-warning':'' }}" aria-current="page" href="{{route('rutaForm')}}" >Registro Clientes</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" >Consulta Clientes</a>
+                    <a class="nav-link {{request()->routeIs('rutaclientes')?'text-warning':'' }}" aria-current="page" href="{{route('rutaclientes')}}" >Consulta Clientes</a>
                 </li>
 
                 </ul>
