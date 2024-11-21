@@ -61,7 +61,31 @@
             <form action="{{route('rutaFormUp', $cliente->id)}}">
             <button type="submit" class="btn btn-warning btn-sm">{{__('Update')}}</button>
             </form>
-            <button type="submit" class="btn btn-danger btn-sm"> Eliminar  </button>
+
+            <form id="form-eliminar-{{ $cliente->id }}" method="POST" action="{{ route('rutaDele', $cliente->id)}}">
+                @method('DELETE')
+                @csrf
+                <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#confirmarEliminacionModal{{ $cliente->id }}">
+                        {{__('Delete')}}
+                    </button>
+                </form>
+                <div class="modal fade" id="confirmarEliminacionModal{{ $cliente->id }}" tabindex="-1" aria-labelledby="confirmarEliminacionModalLabel{{ $cliente->id }}" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="confirmarEliminacionModalLabel{{ $cliente->id }}">Confirmación</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        ¿Estás seguro de que quieres eliminarlo? No podrás cambiarlo
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                                        <button type="button" class="btn btn-danger" onclick="document.getElementById('form-eliminar-{{ $cliente->id }}').submit();">Eliminar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
         </div>
     </div>
     

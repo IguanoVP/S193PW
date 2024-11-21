@@ -57,7 +57,7 @@
 
             <div class="card-footer text-muted">
                 <div class="d-grid gap-2 mt-2 mb-1">
-                    <button type="submit" class="btn btn-success btn-sm">Guardar Libro</button>
+                    <button type="submit" class="btn btn-success btn-sm">Guardar Cliente</button>
                 </div>
             </form>
             </div>

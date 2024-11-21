@@ -86,7 +86,7 @@ class clienteController extends Controller
                 'telefono' => $request->input('txttelefono'),
             ]);
     
-        return to_route('rutaClientes')->with('success', 'Cliente actualizado con éxito.');
+        return to_route('rutaclientes')->with('success', 'Cliente actualizado con éxito.');
     }
 
     /**
@@ -94,6 +94,8 @@ class clienteController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        DB::table('clientes')->where('id', $id)->delete();
+        session()->flash('Estas seguro?','Se ha eliminado el usuario');
+        return to_route('rutaclientes');
     }
 }
