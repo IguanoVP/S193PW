@@ -37,3 +37,5 @@ Route::get('/cliente',[clienteController::class,'index']) ->name('rutaclientes')
 Route::get('/cliente/{id}/editar',[clienteController::class, 'edit']) ->name('rutaFormUp');
 
 Route::delete('/cliente/{id}',[clienteController::class, 'destroy'])->name('rutaDele');
+
+Route::put('/cliente/{id}', [ClienteController::class, 'update'])->name('rutaUp');
