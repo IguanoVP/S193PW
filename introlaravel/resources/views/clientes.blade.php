@@ -24,7 +24,7 @@
                 <ul class="navbar-nav">
 
                 <li class="nav-item">
-                    <a href="/form" class="nav-link" aria-current="page" >{{__('Registro Clientes')}}</a>
+                    <a  class="nav-link" aria-current="page" >{{__('Registro Clientes')}}</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" >Consulta Clientes</a>
@@ -58,7 +58,9 @@
         </div>
 
         <div class="card-footer text-muted">
-            <button type="submit" class="btn btn-warning btn-sm"> Actualizar</button>
+            <form action="{{route('rutaFormUp', $cliente->id)}}">
+            <button type="submit" class="btn btn-warning btn-sm">{{__('Update')}}</button>
+            </form>
             <button type="submit" class="btn btn-danger btn-sm"> Eliminar  </button>
         </div>
     </div>

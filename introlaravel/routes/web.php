@@ -33,3 +33,5 @@ Route::get('/cliente/create',[clienteController::class, 'create'])->name('rutaFo
 Route::post('/cliente',[clienteController::class, 'store'])->name('rutaEnviar');
 
 Route::get('/cliente',[clienteController::class,'index']) ->name('rutaclientes');
+
+Route::get('/cliente/{id}/editar',[clienteController::class, 'edit']) ->name('rutaFormUp');
