@@ -37,7 +37,7 @@ icon: "success"
                 </div>
                 <div class="card-footer text-muted">
               
-                    <form action="{{ route('cliente.edit', $cliente->id) }}" method="GET" style="display: inline;">
+                    <form action="{{ route('cliente.update', $cliente->id) }}" method="GET" style="display: inline;">
                         <button type="submit" class="btn btn-warning btn-sm">
                             {{ __('Actualizar') }}
                         </button>
